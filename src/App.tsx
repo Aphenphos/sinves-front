@@ -22,6 +22,7 @@ const App: Component = () => {
       <button onclick={getProjs}>Get</button>
       <button onclick={testLogin}>Signin</button>
       <button onclick={testPost}>TestPost</button>
+      <button onclick={createUser}>TestPost</button>
     </div>
   );
 };
