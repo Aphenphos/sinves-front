@@ -3,6 +3,7 @@ const BASE_URL = "https://foodtruckbackend-production.up.railway.app/api/v1/";
 export async function signIn(username: string, password: string) {
   const resp = await fetch(`${BASE_URL}admin/signin`, {
     method: "POST",
+    credentials: "include",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -11,7 +12,6 @@ export async function signIn(username: string, password: string) {
       username,
       password,
     }),
-    credentials: "include",
   });
   if (resp.ok) {
     const data = await resp.json();
