@@ -1,4 +1,4 @@
-const BASE_URL = "https://sinves.azurewebsites.net/api/";
+const BASE_URL = "https://foodtruckbackend-production.up.railway.app/api/v1/";
 export async function getAllBusiness() {
   const resp = await fetch(`${BASE_URL}business/getAll`, {
     method: "GET",
@@ -19,7 +19,7 @@ export async function postBusiness(
   links: Array<string>,
   imageLinks: Array<string>
 ) {
-  const resp = await fetch(`${BASE_URL}business/post`, {
+  const resp = await fetch(`${BASE_URL}business/new`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -35,8 +35,9 @@ export async function postBusiness(
   });
 
   if (resp.ok) {
-    console.log("Good");
+    const data = await resp.json();
+    return data;
   } else {
-    console.log(resp);
+    return null;
   }
 }

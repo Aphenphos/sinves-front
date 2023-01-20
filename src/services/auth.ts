@@ -1,7 +1,7 @@
-const BASE_URL = "https://sinves.azurewebsites.net/api/";
+const BASE_URL = "https://foodtruckbackend-production.up.railway.app/api/v1/";
 
 export async function signIn(username: string, password: string) {
-  const resp = await fetch(`${BASE_URL}user/signin`, {
+  const resp = await fetch(`${BASE_URL}admin/signin`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -14,14 +14,15 @@ export async function signIn(username: string, password: string) {
     credentials: "include",
   });
   if (resp.ok) {
-    return resp.json();
+    const data = await resp.json();
+    return data;
   } else {
     return null;
   }
 }
 
 export async function signUp(username: string, password: string) {
-  const resp = await fetch(`${BASE_URL}user/signup`, {
+  const resp = await fetch(`${BASE_URL}admin/signup`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -35,8 +36,9 @@ export async function signUp(username: string, password: string) {
   });
 
   if (resp.ok) {
-    console.log("Good");
+    const data = await resp.json();
+    return data;
   } else {
-    console.log(resp);
+    return null;
   }
 }
