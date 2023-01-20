@@ -39,8 +39,8 @@ export async function signUp(username: string, password: string) {
     const data = await resp.json();
     return data;
   } else {
-    await resp.json();
-    console.error(resp.json());
+    const data = await resp.json();
+    console.error(data);
     return null;
   }
 }
