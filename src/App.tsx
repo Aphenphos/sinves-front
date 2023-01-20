@@ -15,7 +15,7 @@ const App: Component = () => {
     await postBusiness("new", ["cats"], ["links"], ["ImageLinks"]);
   }
   async function createUser() {
-    await signUp("admin", "fgj*3v^n#O#$O542!Z78*Lr7vLc");
+    await signUp("AdminUser", "fgj*3v^n#O#$O542!Z78*Lr7vLc");
   }
   return (
     <div class={styles.App}>
