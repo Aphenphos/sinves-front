@@ -15,9 +15,9 @@ export async function getAllBusiness() {
 
 export async function postBusiness(
   name: string,
-  categories: Array<string>,
   links: Array<string>,
-  imageLinks: Array<string>
+  imageLinks: Array<string>,
+  description: string
 ) {
   const resp = await fetch(`${BASE_URL}business/new`, {
     method: "POST",
@@ -27,9 +27,9 @@ export async function postBusiness(
     },
     body: JSON.stringify({
       name,
-      categories,
       links,
       imageLinks,
+      description,
     }),
     credentials: "include",
   });

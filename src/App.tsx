@@ -9,10 +9,10 @@ const App: Component = () => {
     await getAllBusiness();
   }
   async function testLogin() {
-    await signIn("new", "password");
+    await signIn("AdminUser", "fgj*3v^n#O#$O542!Z78*Lr7vLc");
   }
   async function testPost() {
-    await postBusiness("new", ["cats"], ["links"], ["ImageLinks"]);
+    await postBusiness("new", ["links"], ["ImageLinks"], "description");
   }
   async function createUser() {
     await signUp("AdminUser", "fgj*3v^n#O#$O542!Z78*Lr7vLc");
