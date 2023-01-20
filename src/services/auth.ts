@@ -1,4 +1,4 @@
-const BASE_URL = "https://sinves-production.up.railway.app/api/";
+const BASE_URL = "https://sinves.azurewebsites.net/api/";
 
 export async function signIn(username: string, password: string) {
   const resp = await fetch(`${BASE_URL}user/signin`, {

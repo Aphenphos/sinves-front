@@ -1,4 +1,4 @@
-const BASE_URL = "https://sinves-production.up.railway.app/api/";
+const BASE_URL = "https://sinves.azurewebsites.net/api/";
 export async function getAllBusiness() {
   const resp = await fetch(`${BASE_URL}business/getAll`, {
     method: "GET",
